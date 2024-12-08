@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hospital Appointment Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#appointments">Book Appointment</a></li>
+                <li><a href="#help">Help Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome!</h2>
+            <p>Book your hospital appointments easily and quickly. Use the menu above to navigate.</p>
+        </section>
+
+        <section id="appointments">
+            <h2>Book an Appointment</h2>
+            <form id="booking-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="reason">Reason for Appointment:</label>
+                <textarea id="reason" name="reason" required></textarea>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <section id="help">
+            <h2>Help Menu</h2>
+            <ul>
+                <li><strong>How to Book an Appointment:</strong> Fill in your details in the form and click "Book Appointment".</li>
+                <li><strong>Navigation Tips:</strong> Use the menu at the top to switch between sections.</li>
+                <li><strong>Accessibility Options:</strong> Use the text resizing buttons below for better readability.</li>
+                <li><strong>Support:</strong> Contact us at <a href="mailto:support@hospital.com">support@hospital.com</a>.</li>
+            </ul>
+            <button id="increase-text">Increase Text Size</button>
+            <button id="decrease-text">Decrease Text Size</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Appointment Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
