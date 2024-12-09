@@ -4,33 +4,43 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #e0f7fa, #80deea);
     background-attachment: fixed;
 }
 
 header {
-    background: #ff9800;
-    color: white;
+    background: #80deea; /* Açık mavi ton */
+    color: black;
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
+    max-width: 800px; /* Genişlik sınırı ekleyin */
+    margin: 0 auto; /* Ortalamak için */
+    background: #80deea;
+    
+    display:flex;
+    padding: 10px;
+    
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: #004d40; /* Daha koyu bir mavi-yeşil ton */
     text-decoration: none;
     font-weight: bold;
+}
+nav ul li a:hover {
+    background: #b2ebf2; /* Açık mavi hover efekti */
+    color: #00796b; /* Vurgulu koyu renk */
 }
 
 main {
@@ -47,7 +57,7 @@ section {
 }
 
 h2 {
-    color: #ff9800;
+    color: #26a69a;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -68,7 +78,7 @@ form input, form textarea, form button {
 }
 
 form button {
-    background: #ff9800;
+    background: #26a69a;
     color: white;
     border: none;
     cursor: pointer;
@@ -76,9 +86,8 @@ form button {
     font-weight: bold;
     transition: background 0.3s;
 }
-
 form button:hover {
-    background: #e68900;
+    background: #1e887c;
 }
 
 footer {
@@ -96,9 +105,7 @@ footer p {
 
 /* Help Menu Accessibility Buttons */
 #increase-text, #decrease-text {
-    padding: 10px;
-    margin: 5px;
-    background: #4caf50;
+    background: #80cbc4;
     color: white;
     border: none;
     cursor: pointer;
@@ -106,7 +113,6 @@ footer p {
     font-weight: bold;
     transition: background 0.3s;
 }
-
 #increase-text:hover, #decrease-text:hover {
-    background: #3e8e41;
+    background: #4db6ac;
 }
