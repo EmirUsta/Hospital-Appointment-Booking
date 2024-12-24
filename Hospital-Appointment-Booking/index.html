@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePoint Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="carepoint_logo_new.png" alt="CarePoint Logo">
+                CarePoint Hospital</div>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#appointments">Book Appointment</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="margin-top: 20px;">
+        <section id="home">
+            <h2>Welcome!</h2>
+            <p>Book your hospital appointments easily and quickly. Use the menu above to navigate.</p>
+        </section>
+
+        <section id="appointments">
+            <h2>Book an Appointment</h2>
+            <form id="booking-form">
+                <label for="id">Patient ID:</label>
+                <input type="text" id="id" name="id" required>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="clinic">Select Clinic:</label>
+                <select id="clinic" name="clinic" required>
+                    <option value="">-- Select a Clinic --</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="ent">ENT</option>
+                </select>
+
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">-- Select a Doctor --</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="appointment_date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="appointment_time" required>
+
+                <label for="reason">Reason for Appointment:</label>
+                <textarea id="reason" name="reason"></textarea>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

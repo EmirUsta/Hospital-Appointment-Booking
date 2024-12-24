@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">CarePoint Hospital</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Help Menu</h1>
+            <p>Select a topic below to learn more:</p>
+
+            <div class="help-menu">
+                <button data-topic="booking">How to Book an Appointment</button>
+            </div>
+
+            <div id="help-content" class="help-content">
+                <h2>Welcome to the Help Section</h2>
+                <p>Click on any of the topics above to get detailed information.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".help-menu button");
+            const helpContent = document.getElementById("help-content");
+
+            const topics = {
+                booking: {
+                    title: "How to Book an Appointment",
+                    content: `<p>To book an appointment, follow these steps:</p>
+                              <ol>
+                                  <li>Go to the 'Home' page and click on 'Book Appointment'.</li>
+                                  <li>Select the desired doctor from the list.</li>
+                                  <li>Choose a suitable date and time for your appointment.</li>
+                                  <li>Fill in the required personal details and click 'Confirm'.</li>
+                                  <li>You will receive a confirmation message or email.</li>
+                              </ol>`
+                },
+                
+            };
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const topicKey = button.getAttribute("data-topic");
+                    if (topics[topicKey]) {
+                        helpContent.innerHTML = `<h2>${topics[topicKey].title}</h2>${topics[topicKey].content}`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
