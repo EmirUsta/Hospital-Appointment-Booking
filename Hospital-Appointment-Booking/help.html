@@ -25,6 +25,7 @@
 
             <div class="help-menu">
                 <button data-topic="booking">How to Book an Appointment</button>
+                <button data-topic="contact">Contact Us</button>
             </div>
 
             <div id="help-content" class="help-content">
@@ -51,7 +52,14 @@
                                   <li>You will receive a confirmation message or email.</li>
                               </ol>`
                 },
-                
+                contact: {
+                    title: "Contact Us",
+                    content: `<p>If you have any further questions, feel free to reach out to us:</p>
+                              <ul>
+                                  <li>Email: <a href="mailto:carepoint@gmail.com">carepoint@gmail.com</a></li>
+                                  <li>Phone: <a href="tel:+90XXXXXXXXXX">+90XXXXXXXXXX</a></li>
+                              </ul>`
+                },
             };
 
             buttons.forEach(button => {
